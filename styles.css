@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor{
+    width: 920px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(rgb(223, 55, 22),rgb(223, 206, 23));
+    overflow: hidden;
+}
+
+.dino {
+    width: 166px;
+    height: 166px;
+
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(img/dino.png) repeat-x 0px 0px;
+    background-size: 664px 166px;
+    background-position-x: 0px;
+}
+
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -166px;
+    }
+    to{
+        background-position-x: -498px;
+    }
+}
+
+
+.suelo{
+    width: 200%;
+    height: 66px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    background: url(img/suelo.png);
+    /*background-size: 46px 96px;*/
+}
+
+.nube{
+    width: 92px;
+    height: 35px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(img/nube.png) no-repeat;
+    background-size: 92px 35px;
+}
+
+.cactus{
+    width: 108px;
+    height: 133px;
+    position: absolute;
+    bottom: 16px;
+
+    z-index: 0;
+
+    background: url(img/cactus1.png) no-repeat;
+    background-size: 108px 133px;
+}
+
+.cactus2{
+    width: 156px;
+    height: 144px;
+
+    background: url(img/cactus2.png) no-repeat;
+}
